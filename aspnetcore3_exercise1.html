@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="utf-8">
+    	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title> ASP.NET Core 3.0. </title>
+	<meta name="description" content="Information Technology">
+    	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    	<meta name="author" content="VD">
+    	<link rel="shortcut icon" href="http://krebner.com/security.ico" />
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    
+</head>
+<body oncontextmenu="alert('Smile. Life is too short to be anything but happy!');return false;" onselectstart="return false" ondragstart="return false">
+<br>
+<div class="container">
+
+	<div   style="text-align:center;font-size: 150%;"><h1>Working with ASP.NET Core 3.0</h1> </div>
+    
+    <br>
+    <blockquote>
+        <legend>What's the difference between .NET Core and .NET Framework programming?</legend>
+        <a href="https://www.youtube.com/watch?v=79UWvR734wI" target="_blank" class="btn btn-secondary btn-block">This video explains the difference between these .NET technologies!</a>
+    </blockquote>
+<br>
+    <hr>
+<br>
+    
+    <h3><strong>Project</strong>: Accessing a MS SQL Server database from an ASP.NET Core 3.0 application.</h3>
+<br>
+<ul>
+   <li><h3>Let's create a MS SQL Database named <strong>Bizness</strong>  and a table named <strong>Customers</strong>. The fields should be CustomerID, FirstName, LastName, Email. Don't forget that the CustomerID field is a primary key and an identifier(1,1). The other fields are just nvarchar(50).</h3> </li> 
+    <li><h3>Create a new ASP.NET Core application (MVC) named whatever you want.            </h3></li>
+    <li><h3>Now go to Tools -> Nugget Package Manager -> Package Manager Console and type:           </h3></li>
+    <li><h3><code>install-package microsoft.entityframeworkcore</code>            </h3></li>
+    <li><h3> <code>install-package microsoft.entityframeworkcore.design</code>           </h3></li>
+    <li><h3><code>install-package microsoft.entityframeworkcore.tools</code>            </h3></li>
+    <li><h3><code>install-package microsoft.entityframeworkcore.sqlserver</code>            </h3></li>
+    <li><h3> And now we have to create the database context and entity classes, that is, the EF Model.           </h3></li>
+    <li><h3> <code>scaffold-dbcontext "server=<i>your_computer_name</i>;database=Bizness;Integrated Security=True" microsoft.entityframeworkcore.sqlserver -OutputDir Models</code>           </h3></li>
+    <li><h3> Now go to Build -> Build Solution           </h3></li>
+    <li><h3> And now, create the Customers controller. Controllers -> Add -> Controller. Choose MVC controller with views using EF. <i>Model Class:</i> Customers and <i>Data Context Class:</i>BiznessContext           </h3>.</li>
+    <li><h3>  Now add this line to the Startup.cs file:          </h3></li>
+    <li><h3> <code>services.AddDbContext<Models.BiznessContext>();</Models.BiznessContext></code>           </h3></li>
+    <li><h3> And in the same Startup.cs file, change the default controller from Home to Customers.           </h3></li>
+    <li><h3>Finally press <kbd>F5</kbd>.         </h3></li>
+    <li><h3> Add a new record.            </h3></li>
+    <li><h3> Did it work? Lots of things to do before making it work. I still like .NET Framework programming better, but let's face it, the future is on .NET Core.             </h3></li>
+    
+    
+    
+    
+    
+</ul>
+
+
+
+</div>
+
+<!-- These Javascript links are required for the proper functionality of Bootstrap. And they should always be placed at the very end, near to the closing body tag. -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
+
+  
