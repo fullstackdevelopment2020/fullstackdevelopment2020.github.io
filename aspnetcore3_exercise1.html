@@ -45,7 +45,7 @@
     <li><h3> Now go to Build -> Build Solution           </h3></li>
     <li><h3> And now, create the Customers controller. Controllers -> Add -> Controller. Choose MVC controller with views using EF. <i>Model Class:</i> Customers and <i>Data Context Class:</i>BiznessContext           </h3>.</li>
     <li><h3>  Now add this line to the Startup.cs file:          </h3></li>
-    <li><h3> <code>services.AddDbContext<Models.BiznessContext>();</Models.BiznessContext></code>           </h3></li>
+    <li><h3> <code>services.AddDbContext&lt;Models.BiznessContext&gt;();</code>           </h3></li>
     <li><h3> And in the same Startup.cs file, change the default controller from Home to Customers.           </h3></li>
     <li><h3>Finally press <kbd>F5</kbd>.         </h3></li>
     <li><h3> Add a new record.            </h3></li>
