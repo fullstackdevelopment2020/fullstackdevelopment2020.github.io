@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="utf-8">
+    	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title> ASP.NET Core 3.0. </title>
+	<meta name="description" content="Information Technology">
+    	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    	<meta name="author" content="VD">
+    	<link rel="shortcut icon" href="http://krebner.com/security.ico" />
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    
+</head>
+<body oncontextmenu="alert('Smile. Life is too short to be anything but happy!');return false;" onselectstart="return false" ondragstart="return false">
+<br>
+<div class="container">
+
+	<div   style="text-align:center;font-size: 150%;"><h1>Working with ASP.NET Core 3.0</h1> </div>
+    
+    <br>
+    
+<br>
+    <hr>
+<br>
+    
+    <h3><strong>Project</strong>: Publishing an ASP.NET Core 3.0 application to IIS.</h3>
+<br>
+<blockquote>
+    <legend>Visit this web site and read it as fast as you can. Don't sweat the details.</legend>
+    <p><a href="https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/?view=aspnetcore-3.0" target="_blank" class="btn btn-secondary btn-block">Hosting an ASP.NET Core app on Windows with IIS</a></p>
+    
+    <p></p>
+</blockquote>
+    <br>
+    <div style="font-size: 150%;font-family: cursive;">
+    
+    <ol type="I">
+        <li>Install IIS on your computer. Just go to Control Panel (Programs, Windows Features On/Off). Don't forget to click on every single check box!</li>
+        <li> Click the button below to download the <i>magical</i> component required to make this project work and install it: <a href="https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-aspnetcore-3.0.1-windows-hosting-bundle-installer" target="_blank" class="btn btn-secondary btn-block">ASP.NET Core 3.0 Runtime (v3.0.1) - Windows Hosting Bundle Installer</a></li>
+        <li>Restart IIS by typing <code>iisreset</code> on the command line. You may need to run it as an Administrator.</li>
+        <li> Create an ASP.NET Core 3.0 MVC application. Name it AspNetCoreTest.</li>
+        <li> Press <kbd>F5</kbd> to build it and test it.</li>
+        
+        <li>Publish the application to a folder (just use default settings). Copy the <strong>publish </strong> folder to your C:\Inetpub\wwwroot folder and rename it to AspNetCoreTest. </li>
+        <li>Open IIS (Administrative Tools) and create a new Application Pool (name it ForCoreApps). Make sure to set this: <i>.NET CLR version:</i><strong> <i>No Managed Code</i></strong>. Check the box to Start the Application Pool Immediately.</li>
+        <li>Expand Sites -> Default Web Site. Convert the AspNetCoreTest folder to an application. Make sure to point to the ForCoreApps application pool. </li>
+        <li>Right click on AspNetCoreTest -> Manage Application -> Browse</li>
+        <li>Did it work?</li>
+    </ol>
+    
+    
+    </div>
+
+</div>
+
+<!-- These Javascript links are required for the proper functionality of Bootstrap. And they should always be placed at the very end, near to the closing body tag. -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
+
+  
